@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: bisque;
+    margin-top: 2em;
+    font-size: 4em;
+}
+
+#app {
+    height: 75vh;
+}
+
+#d-m-container {
+    padding: 1em;
+    outline: 1rem solid #c720c7;
+    border-radius: 0 2em;
+    background-color: white;
+}
+
+.btn {
+    font-size: 4em;
+    padding: 0;
+}
+
+#display {
+    font-size: 3em;
+}
+
+
+/*
+.drum-machine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+.d-m-container {
+    outline: thick double #32a1ce;
+}
+
+#drum-machine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*/
