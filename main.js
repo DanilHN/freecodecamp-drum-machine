@@ -59,27 +59,35 @@ class MyApp extends React.Component {
             document.getElementById('display').innerText = id
         }
 
-        return (
-            <div id='drum-machine' className='h-100 w-100 d-flex justify-content-center align-items-center'>
-                <div id='d-m-container' className='row h-50 w-75 align-items-center'>
-                    <div id='buttons' className='col-6 h-100 d-flex flex-column justify-content-around'>
-                        <div className='row h-75 justify-content-between'>
-                            {drum.map(a =>
-                                <button id={a.id} className='btn btn-danger m-1 col-3 drum-pad'
-                                    onClick={() => { handleClick(a.keyTrigger, a.id); pressKey(a.id) }}>{a.keyTrigger}
-                                    <audio id={a.keyTrigger} className='clip' src={a.url} type='audio/mpeg'></audio>
-                                </button>
-                            )}
-                        </div>
-                    </div>
-                    <div id='control-panel' className='col-6 h-100 d-flex flex-column justify-content-evenly'>
-
-                        <div id='display' className='d-flex justify-content-center'>Do you want to play?</div>
-
-
+        return (<div id='drum-machine'
+            className='h-100 w-100 d-flex justify-content-center align-items-center' >
+            <div id='d-m-container'
+                className='row h-50 w-75 align-items-center' >
+                <div id='buttons'
+                    className='col-6 h-100 d-flex flex-column justify-content-around' >
+                    <div className='row h-75 justify-content-between' > {
+                        drum.map(a =>
+                            <button id={a.id}
+                                className='btn btn-danger m-1 col-3 drum-pad'
+                                onClick={
+                                    () => {
+                                        handleClick(a.keyTrigger, a.id);
+                                        pressKey(a.id)
+                                    }} > {a.keyTrigger} <audio id={a.keyTrigger} className='clip'
+                                        src={a.url}
+                                        type='audio/mpeg' > </audio> </button>
+                        )
+                    }
                     </div>
                 </div>
-            </div>
+                <div id='control-panel'
+                    className='col-6 h-100 d-flex flex-column justify-content-evenly' >
+
+                    <div id='display'
+                        className='d-flex justify-content-center' > Do you want to play ? </div>
+
+
+                </div> </div> </div>
 
 
         )
